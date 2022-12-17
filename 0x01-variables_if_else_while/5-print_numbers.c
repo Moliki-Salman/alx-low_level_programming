@@ -1,4 +1,4 @@
-#include <stdio .h>
+#include <stdio.h>
 
 /**
  * main - prints all atrings from 0 to 9
