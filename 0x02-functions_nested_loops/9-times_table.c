@@ -8,7 +8,7 @@ void times_table(void)
 {
 	int num1, card, pro;
 
-	for (num = 0; num1 <= 9; num1++)
+	for (num1 = 0; num1 <= 9; num1++)
 	{
 		_putchar('0');
 
@@ -23,6 +23,7 @@ void times_table(void)
 				_putchar(' ');
 			else
 				_putchar((pro / 10) + '0');
+
 			-putchar((pro % 10) + '0');
 		}
 		_putchar('\n');
