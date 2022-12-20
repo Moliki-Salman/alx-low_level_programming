@@ -1,10 +1,11 @@
-#include "main.h"
+#nclude "main.h"
 
 /**
- * _isupper - checks is a character is uppercase
- * @c: carrier integer variable
- * Return: 1 for uppercase or 0 otherwise
+ * _isupper - Check if a letter is upper
+ * @c: The number to be checked
+ * Return: 1 if c is uppercase, 0 otherwise
  */
+
 
 int _isupper(int c)
 {
@@ -12,5 +13,5 @@ int _isupper(int c)
 	{
 		return (1);
 	}
-	return (0);
+		return (0);
 }
