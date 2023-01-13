@@ -1,32 +1,62 @@
 #include <stdio.h>
+                
+#include <stdlib.h>
+                
+#include "main.h"
 
 /**
- * _atoi - converts a string to an integer
- * @s: supplied string
- * Return: 0
+
+ * main - prints the minimum number of coins to
+
+ * make change for an amount of money
+
+ * @argc: number of arguments
+
+ * @argv: array of arguments
+
+ *
+
+ * Return: 0 (Success), 1 (Error)
+
  */
 
-int _atoi(char *s)
+int main(int argc, char *argv[])
 {
-	int sign = 1;
-	unsigned int total = 0;
-	char null_flag = 0;
-
-	while (*s)
+	int num, j, result;
+	
+	int coins[] = {25, 10, 5, 2, 1};
+	
+	if (argc != 2)
 	{
-		if (*s == '-')
-			sign *= -1;
+		 printf("Error\n");
 
-		if (*s >= '0' && *s <= '9')
-		{
-			null_flag = 1;
-			total = total * 10 + *s - '0';
-		}
-		else if (null_flag)
-			break;
-		s++;
+		 return (1);
 	}
-	if (sign < 0)
-		total = (-total);
-	return (total);
+
+	num = atoi(argv[1]);
+
+	result = 0;
+
+	if (num < 0)
+	
+	{
+		printf("0\n");
+
+		return (0);
+	}
+
+	for (j = 0; j < 5 && num >= 0; j++)
+	
+	{
+		while (num >= coins[j])
+		{
+			result++;
+
+			num -= coins[j];
+		}
+	}
+	
+	printf("%d\n", result);
+
+	return (0);
 }
